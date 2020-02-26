@@ -27,6 +27,8 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+
+		wp_enqueue_script('custom-js', get_template_directory_uri().'/js/custom.js', 'jquery');
 	}
 } // endif function_exists( 'understrap_scripts' ).
 
